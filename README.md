@@ -101,3 +101,41 @@ Second featured project: remove this comment markers and replace YOUR_REPO_NAME 
 ---
 
 <p align="center">Thanks for stopping by! ⭐ If you like my projects, feel free to star them.</p>
+name: Generate Snake
+
+on:
+  # run automatically every day at midnight (UTC)
+  schedule:
+    - cron: "0 0 * * *"
+  # lets you run it manually from the Actions tab
+  workflow_dispatch:
+  # also run when you push to main
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      # generate the snake SVGs (light and dark) from your contribution graph
+      - name: Generate snake animation
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-snake.svg
+            dist/github-snake-dark.svg?palette=github-dark
+
+      # push the generated files to a separate branch called "output"
+      - name: Push to output branch
+        uses: crazy-max/ghaction-github-pages@v3.1.0
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
