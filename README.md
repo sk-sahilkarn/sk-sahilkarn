@@ -75,6 +75,11 @@ Second featured project: remove this comment markers and replace YOUR_REPO_NAME 
   <img height="180" src="https://github-readme-stats.vercel.app/api?username=sk-sahilkarn&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true" alt="GitHub stats" />
   <img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=sk-sahilkarn&layout=compact&theme=tokyonight&hide_border=true" alt="Top languages" />
 </p>
+<!-- Snake Game Repo View -->
+
+<div align="center">
+  <img src="https://profile-readme-generator.com/assets/snake.svg" alt="Snake animation" />
+</div>
 
 ## 🔥 Contribution Streak
 
