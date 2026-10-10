@@ -70,7 +70,7 @@ Second featured project: remove this comment markers and replace YOUR_REPO_NAME 
 <!-- Snake Game Repo View -->
 
 <div align="center">
-  <img src="https://profile-readme-generator.com/assets/snake.svg" alt="Snake animation" />
+  <img src="https://profile-readme-generator.com/assets/snake.svg" alt="Snake" />
 </div>
 
 ## 🔥 Contribution Streak
